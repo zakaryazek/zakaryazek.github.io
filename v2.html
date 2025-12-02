@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Zakarya Zekhnini</title>
+  <link rel="stylesheet" href="v2.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1>Zakarya Zekhnini</h1>
+
+      <button class="burger-btn" id="burger-btn" style="display: none;">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="menu" id="menu">
+        <a href="#accueil">Accueil</a>
+        <a href="#qui-suis-je">Qui suis-je</a>
+        <a href="#competences">Compétences</a>
+        <a href="#formations">Formations</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button id="theme-toggle" class="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil">
+      <canvas id="canvas"></canvas>
+      <div class="content">
+        <div class="hero-content">
+          <h1 class="hero-title">ZAKARYA ZEKHNINI</h1>
+          <p class="hero-subtitle">Étudiant en BUT Informatique</p>
+          <p class="hero-description">Bienvenue sur mon site</p>
+          <div class="hero-buttons">
+            <a href="#realisations" class="btn-primary">Découvrir mes projets</a>
+            <a href="#contact" class="btn-secondary">Me contacter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="qui-suis-je">
+      <div class="content">
+        <h2>Qui suis-je ?</h2>
+
+        <div class="about-layout">
+          <!-- Photo à gauche -->
+          <div class="about-photo">
+            <img id="about-image" src="images/portrait.jpg" alt="Photo de Zakarya Zekhnini">
+          </div>
+
+          <!-- Menu et contenu à droite -->
+          <div class="about-right">
+            <!-- Menu horizontal -->
+            <nav class="about-menu">
+              <button class="about-menu-item active" data-section="presentation">
+                Petite présentation
+              </button>
+
+              <div class="about-menu-dropdown">
+                <button class="about-menu-item">
+                  Soft skills ▼
+                </button>
+                <div class="dropdown-content">
+                  <button data-section="langues">Langues</button>
+                  <button data-section="communication">Communication</button>
+                  <button data-section="teamwork">Travail en équipe</button>
+                </div>
+              </div>
+
+              <div class="about-menu-dropdown">
+                <button class="about-menu-item">
+                  Hobbies ▼
+                </button>
+                <div class="dropdown-content">
+                  <button data-section="musculation">Musculation</button>
+                  <button data-section="depannage">Dépannage PC</button>
+                  <button data-section="electronique">Électronique</button>
+                </div>
+              </div>
+            </nav>
+
+            <!-- Zone de texte dynamique -->
+            <div class="about-content-box">
+              <div id="dynamic-text">
+                <!-- Le contenu sera inséré ici par JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences">
+      <div class="content">
+        <h2>Compétences</h2>
+        <div class="skills">
+          <div class="skill">
+            <h3>Développement Web</h3>
+            <p class="muted">HTML5 / CSS3
+              JavaScript (ES6+)
+              PHP
+              Symfony
+              SQL
+              Responsive Design / Bootstrap</p>
+          </div>
+          <div class="skill">
+            <h3>Programmation Logicielle</h3>
+            <p class="muted">Java
+              C#
+              Python
+              POO / UML
+              Tests unitaires
+              Design Patterns</p>
+          </div>
+          <div class="skill">
+            <h3>Réseaux & Systèmes</h3>
+            <p class="muted">Bash
+              Architecture réseau
+              Wireshark
+              Filius
+              Protocoles TCP/IP
+              Virtualisation / Cloud</p>
+          </div>
+          <div class="skill">
+            <h3>Outils & Environnements</h3>
+            <p class="muted">VSCode / Visual Studio
+              Eclipse / NetBeans
+              VMware / Linux
+              Git / GitHub / GitLab
+              Figma / Canva
+              Diagrammes Gantt</p>
+          </div>
+          <div class="skill">
+            <h3>Soft Skills</h3>
+            <p class="muted">Travail en équipe
+              Autonomie
+              Analyse et résolution
+              Documentation
+              Anglais technique
+              Gestion de projet</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="formations">
+      <div class="content">
+        <h2>Formations</h2>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          <div class="timeline-arrow"></div>
+          <div class="timeline-item bottom" data-modal="bac">
+            <div class="timeline-connector"></div>
+            <div class="timeline-box">
+              <h3>Baccalauréat</h3>
+              <p class="muted">Série scientifique / technologique — mention bien.</p>
+            </div>
+          </div>
+          <div class="timeline-item top" data-modal="but">
+            <div class="timeline-connector"></div>
+            <div class="timeline-box">
+              <h3>BUT Informatique</h3>
+              <p class="muted">Formation axée sur le développement, la conception d'applications et la gestion de
+                projet.</p>
+            </div>
+          </div>
+          <div class="timeline-item bottom" data-modal="poursuite">
+            <div class="timeline-connector"></div>
+            <div class="timeline-box">
+              <h3>Poursuite d'études</h3>
+              <p class="muted">Préparation d'un master ou d'une école d'ingénieur dans le domaine du développement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="formation-modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button id="close-modal" class="close-btn">✕</button>
+        <h3 id="modal-title"></h3>
+        <p id="modal-body"></p>
+      </div>
+    </div>
+
+    <section id="realisations">
+      <div class="content">
+        <h2>Réalisations</h2>
+
+        <!-- Filtres -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">Tous les projets</button>
+          <button class="filter-btn" data-filter="développement web">Développement Web</button>
+          <button class="filter-btn" data-filter="programmation logicielle">Programmation Logicielle</button>
+          <button class="filter-btn" data-filter="réseaux & systèmes">Réseaux & Systèmes</button>
+        </div>
+
+        <!-- Carrousel de projets -->
+        <div class="projects-carousel-wrapper">
+          <button class="carousel-arrow left" id="carousel-left">‹</button>
+          <div class="projects-carousel" id="projects-container"></div>
+          <button class="carousel-arrow right" id="carousel-right">›</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="project-modal" class="modal" aria-hidden="true">
+      <div class="modal-content">
+        <button id="close-project-modal" class="close-btn">✕</button>
+        <h3 id="project-modal-title"></h3>
+        <p id="project-modal-body"></p>
+      </div>
+    </div>
+
+    <section id="contact">
+      <div class="content">
+        <h2>Contact</h2>
+        <p class="contact-intro">N'hésitez pas à me contacter pour toute opportunité ou collaboration !</p>
+
+        <div class="contact-unified-card">
+          <div class="contact-items">
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p class="contact-value" id="email-text">zakarya.zekhnini@example.com</p>
+              </div>
+              <button class="contact-btn" onclick="copyEmail()">
+                <span id="copy-text">Copier</span>
+              </button>
+            </div>
+
+            <!-- Téléphone -->
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div class="contact-details">
+                <h3>Téléphone</h3>
+                <p class="contact-value">+33 6 12 34 56 78</p>
+              </div>
+              <a href="tel:+33612345678" class="contact-btn">Appeler</a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-item">
+              <div class="contact-icon">💼</div>
+              <div class="contact-details">
+                <h3>LinkedIn</h3>
+                <p class="contact-value">Zakarya Zekhnini</p>
+              </div>
+              <a href="https://linkedin.com/in/votre-profil" target="_blank" class="contact-btn">Profil</a>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-item">
+              <div class="contact-icon">💻</div>
+              <div class="contact-details">
+                <h3>GitHub</h3>
+                <p class="contact-value">@zakarya-zekhnini</p>
+              </div>
+              <a href="https://github.com/votre-username" target="_blank" class="contact-btn">Projets</a>
+            </div>
+
+            <!-- CV -->
+            <div class="contact-item">
+              <div class="contact-icon">📄</div>
+              <div class="contact-details">
+                <h3>Curriculum Vitae</h3>
+                <p class="contact-value">Mon CV complet</p>
+              </div>
+              <a href="CV_Zakarya_Zekhnini.pdf" download class="contact-btn">Télécharger</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Zakarya Zekhnini —
+      <a href="https://github.com/" target="_blank">GitHub</a> |
+      <a href="#">LinkedIn</a> |
+      <a href="#">Mentions Légales</a>
+    </p>
+  </footer>
+
+  <script src="v2.js"></script>
+</body>
+
+</html>
