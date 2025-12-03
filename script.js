@@ -204,53 +204,39 @@ window.addEventListener('scroll', () => {
 // --- Modales formations ---
 const formations = {
   bac: {
-    titre: "Baccalauréat Scientifique",
-    etablissement: "Lycée [Nom du lycée]",
-    image: "images/bac.jpg",
-    annee: "2022",
-    parcours: [
-      "Série scientifique avec spécialités Mathématiques et Physique-Chimie",
-      "Mention bien obtenue",
-      "Projets interdisciplinaires en sciences"
-    ],
-    competences: [
-      "Rigueur scientifique et logique mathématique",
-      "Méthode de travail structurée",
-      "Capacité d'analyse et de synthèse",
-      "Bases solides en programmation (Python)"
-    ]
-  },
-  certification: {
-    titre: "Certification [Nom de la certification]",
-    etablissement: "[Organisme certificateur]",
-    image: "images/certification.jpg",
-    annee: "2023",
-    parcours: [
-      "Certification professionnelle en [Domaine]",
-      "Formation intensive de [durée]",
-      "Projet professionnel validé"
-    ],
-    competences: [
-      "Compétence spécifique 1",
-      "Compétence spécifique 2",
-      "Compétence spécifique 3",
-      "Expérience professionnelle acquise"
-    ]
-  },
+  titre: "Baccalauréat scientifique, option Systèmes d'information et numérique",
+  etablissement: "Lycée polyvalent Les Iris",
+  image: "images/bac.jpg",
+  annee: "2020 - 2023",
+  parcours: [
+    "Série scientifique avec spécialités mathématiques et physique-chimie",
+    "Cambridge English Certificate (CEC) obtenu avec le niveau C1",
+    "Baccalauréat obtenu avec mention"
+  ],
+  competences: [
+    "Mathématiques et logique algorithmique",
+    "Bases du développement web (HTML/CSS) et de la programmation électronique (Arduino)",
+    "Bases des réseaux (protocoles et adressage IP)",
+    "ERASMUS : anglais courant"
+  ]
+},
   but: {
     titre: "BUT Informatique",
-    etablissement: "IUT [Ville]",
+    etablissement: "IUT Gradignan",
     image: "images/but.jpg",
-    annee: "2023-2026",
+    annee: "2023 - actuellement",
     parcours: [
-      "Formation axée sur le développement web et mobile",
+      "Formation axée sur le développement d'application",
       "Conception d'applications orientée objet",
       "Gestion de projet avec méthodologies Agile",
-      "Stages en entreprise chaque année"
+      "Stages en entreprise",
+      "Plus encore..."
+      
     ],
     competences: [
       "Développement full-stack (Frontend/Backend)",
       "Architecture logicielle et design patterns",
+      "Systèmes et Réseaux approfondis",
       "Gestion de bases de données relationnelles",
       "Travail en équipe et communication professionnelle"
     ]
